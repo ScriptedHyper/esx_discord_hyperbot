@@ -253,35 +253,3 @@ AddEventHandler("esx:jackingcar", function(model)
    sendToDiscord(_U('server_carjacking'),xPlayer.name.." ".._('user_carjacking').." ".. model,Config.purple)
 
 end)
-
-
--- Event when a player is killing an other one
-
---[[RegisterServerEvent('esx:killerlog')
-AddEventHandler('esx:killerlog', function(t,killer, kilerT) -- t : 0 = NPC, 1 = player
-  local xPlayer = ESX.GetPlayerFromId(source)
-  if(t == 1) then
-     local xPlayer = ESX.GetPlayerFromId(source)
-     local xPlayerKiller = ESX.GetPlayerFromId(killer)
-
-     if(xPlayerKiller.name ~= nil and xPlayer.name ~= nil)then
-
-       if(kilerT.killerinveh) then
-         local model = kilerT.killervehname
-
-            sendToDiscord(_U('server_kill'), xPlayer.name .." ".._('user_kill').." "..xPlayerKiller.name.." ".._('with'),Config.red)
-
-
-
-       else
-            sendToDiscord(_U('server_kill'), xPlayer.name .." ".._('user_kill').." "..xPlayerKiller.name,Config.red)
-
-
-
-       end
-    end
-  else
-     sendToDiscord(_U('server_kill'), xPlayer.name .." ".. _('user_kill_environnement'),Config.red)
-  end
-
-end)]]--
